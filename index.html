@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>새송이버섯 통구이</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#fff8ec;
+  color:#3b230f;
+  font-family:'Noto Sans KR',sans-serif;
+}
+
+.wrap{
+  width:100%;
+  max-width:520px;
+  margin:0 auto;
+  padding:18px 14px 40px;
+}
+
+.notice{
+  font-size:11px;
+  color:#555;
+  margin-bottom:22px;
+}
+
+.label{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  justify-content:center;
+  color:#5b3418;
+  font-size:20px;
+  letter-spacing:8px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.label:before,
+.label:after{
+  content:"";
+  width:90px;
+  height:1.5px;
+  background:#b98f61;
+}
+
+h1{
+  font-family:'Jua',sans-serif;
+  text-align:center;
+  font-size:46px;
+  font-weight:400;
+  margin:0;
+  color:#4a2607;
+}
+
+.subtitle{
+  text-align:center;
+  font-size:18px;
+  color:#7b4b24;
+  margin:10px 0 18px;
+}
+
+.hero{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:18px 18px 0 0;
+  display:block;
+}
+
+.card{
+  background:#fffdf8;
+  border:1px solid #efd8b8;
+  border-radius:18px;
+  padding:22px 20px;
+  box-shadow:0 4px 16px rgba(92,55,18,0.08);
+  margin-bottom:18px;
+}
+
+.recipe-card{
+  border-radius:0 0 18px 18px;
+}
+
+.section-title{
+  font-family:'Jua',sans-serif;
+  font-size:27px;
+  font-weight:400;
+  margin:0 0 16px;
+}
+
+.step{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:11px 0;
+  border-bottom:1px dashed #ead5bd;
+  font-size:15px;
+  line-height:1.55;
+}
+
+.step:last-child{border-bottom:none}
+
+.num{
+  flex:0 0 26px;
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  background:#a27b56;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:14px;
+}
+
+.seasoning-title{
+  font-family:'Jua',sans-serif;
+  font-size:28px;
+  font-weight:400;
+  margin:0 0 18px;
+}
+
+.season-card{
+  border:1px solid #f0d6ad;
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  background:#fffaf1;
+}
+
+.season-card:last-child{margin-bottom:0}
+
+.season-text{
+  border-left:5px solid #b98f61;
+  padding-left:14px;
+  flex:1;
+}
+
+.season-card:nth-child(3) .season-text{border-left-color:#7fad64}
+.season-card:nth-child(4) .season-text{border-left-color:#f28b45}
+
+.season-name{
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:7px;
+}
+
+.season-text ul{
+  margin:0;
+  padding-left:18px;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.season-btn{
+  display:inline-block;
+  background:#ffd15a;
+  border:1.5px solid #e8a727;
+  color:#3b230f;
+  text-decoration:none;
+  padding:12px 16px;
+  border-radius:11px;
+  font-weight:800;
+  font-size:14px;
+  white-space:nowrap;
+}
+
+.share-box{
+  text-align:center;
+}
+
+.share-title{
+  font-family:'Jua',sans-serif;
+  font-size:24px;
+  margin-bottom:6px;
+}
+
+.share-sub{
+  font-size:13px;
+  color:#7b6a58;
+  margin-bottom:14px;
+}
+
+.share-buttons{
+  display:flex;
+  gap:12px;
+}
+
+.share-buttons button{
+  flex:1;
+  border:none;
+  border-radius:12px;
+  padding:13px 10px;
+  font-weight:800;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.kakao{
+  background:#ffd15a;
+  color:#3b230f;
+}
+
+.copy{
+  background:#fffaf1;
+  border:1px solid #efd8b8!important;
+  color:#3b230f;
+}
+
+@media(max-width:420px){
+  h1{font-size:40px}
+  .hero{height:220px}
+  .season-card{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .season-btn{
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <div class="notice">ⓘ 쿠팡 파트너스 활동의 일환으로, 수수료를 제공받습니다.</div>
+
+  <div class="label">RECIPE</div>
+
+  <h1>새송이버섯 통구이</h1>
+
+  <p class="subtitle">고기보다 맛있다는 초간단 버섯구이 🍄</p>
+
+  <img class="hero" src="mushroom.jpg" alt="새송이버섯 통구이">
+
+  <div class="card recipe-card">
+    <h2 class="section-title">👩‍🍳 만드는 방법</h2>
+
+    <div class="step"><div class="num">1</div><div>새송이버섯은 밑동만 살짝 잘라내고 통째로 준비해 주세요.</div></div>
+    <div class="step"><div class="num">2</div><div>올리브오일 또는 버터를 넉넉히 발라주세요.</div></div>
+    <div class="step"><div class="num">3</div><div>원하는 시즈닝을 버섯 전체에 골고루 뿌려주세요.</div></div>
+    <div class="step"><div class="num">4</div><div>에어프라이어 180도에서 12분 구워주세요.</div></div>
+    <div class="step"><div class="num">5</div><div>중간에 한 번 뒤집은 뒤 3~5분 더 구워주세요.</div></div>
+    <div class="step"><div class="num">6</div><div>겉은 노릇하고 속은 촉촉해지면 완성!</div></div>
+  </div>
+
+  <div class="card">
+    <h2 class="seasoning-title">⭐ 어떤 시즈닝이 맛있을까?</h2>
+
+    <div class="season-card">
+      <div class="season-text">
+        <div class="season-name">고기 같은 풍미</div>
+        <ul>
+          <li>가장 추천</li>
+          <li>스테이크 느낌</li>
+        </ul>
+      </div>
+      <a class="season-btn" href="링크1" target="_blank">👉 시즈닝 보러가기</a>
+    </div>
+
+    <div class="season-card">
+      <div class="season-text">
+        <div class="season-name">깔끔하고 향긋한 맛</div>
+        <ul>
+          <li>버터와 궁합 최고</li>
+          <li>담백한 풍미</li>
+        </ul>
+      </div>
+      <a class="season-btn" href="링크2" target="_blank">👉 시즈닝 보러가기</a>
+    </div>
+
+    <div class="season-card">
+      <div class="season-text">
+        <div class="season-name">감칠맛 폭발</div>
+        <ul>
+          <li>맥주 안주 느낌</li>
+          <li>중독성 있는 맛</li>
+        </ul>
+      </div>
+      <a class="season-btn" href="링크3" target="_blank">👉 시즈닝 보러가기</a>
+    </div>
+  </div>
+
+  <div class="card share-box">
+    <div class="share-title">💗 이 레시피 공유하기</div>
+    <div class="share-sub">친구들에게도 알려주세요!</div>
+
+    <div class="share-buttons">
+      <button class="kakao" onclick="sharePage()">💬 카카오톡 공유</button>
+      <button class="copy" onclick="copyLink()">🔗 링크 복사</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href);
+  alert("링크가 복사됐어요!");
+}
+
+function sharePage(){
+  if(navigator.share){
+    navigator.share({
+      title:"새송이버섯 통구이",
+      text:"고기보다 맛있다는 초간단 버섯구이 🍄",
+      url:window.location.href
+    });
+  }else{
+    copyLink();
+  }
+}
+</script>
+
+</body>
+</html>
