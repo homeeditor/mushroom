@@ -234,6 +234,110 @@ h1{
     text-align:center;
   }
 }
+  .flavor-section{
+  background:#fffdf8;
+  border:1px solid #efd8b8;
+  border-radius:22px;
+  padding:26px 20px;
+  margin-bottom:18px;
+  box-shadow:0 4px 16px rgba(92,55,18,0.08);
+}
+
+.flavor-title{
+  font-family:'Jua',sans-serif;
+  font-size:30px;
+  text-align:center;
+  margin:0 0 14px;
+}
+
+.flavor-sub{
+  text-align:center;
+  font-size:17px;
+  font-weight:800;
+  margin:0 0 22px;
+}
+
+.flavor-card{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border:2px solid #ead3b4;
+  border-radius:16px;
+  padding:14px;
+  margin-bottom:12px;
+  background:#fffaf1;
+}
+
+.flavor-num{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#a27b56;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  flex-shrink:0;
+}
+
+.flavor-icon{
+  font-size:30px;
+  width:36px;
+  text-align:center;
+  flex-shrink:0;
+}
+
+.flavor-text{
+  flex:1;
+}
+
+.flavor-text h3{
+  margin:0 0 6px;
+  font-size:19px;
+  font-weight:900;
+}
+
+.flavor-text p{
+  margin:2px 0;
+  font-size:13px;
+  line-height:1.4;
+}
+
+.flavor-btn{
+  background:#ffd15a;
+  border:2px solid #e8a727;
+  border-radius:12px;
+  padding:10px 12px;
+  font-size:13px;
+  font-weight:900;
+  color:#3b230f;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.flavor-card.green{border-color:#91b875;}
+.flavor-card.red{border-color:#ef7770;}
+.flavor-card.green h3{color:#3f7b2b;}
+.flavor-card.red h3{color:#d60000;}
+
+.flavor-bottom{
+  text-align:center;
+  font-size:15px;
+  font-weight:800;
+  margin:16px 0 0;
+}
+
+@media(max-width:420px){
+  .flavor-card{
+    align-items:flex-start;
+  }
+
+  .flavor-btn{
+    font-size:12px;
+    padding:9px 10px;
+  }
+}
 </style>
 </head>
 
@@ -274,43 +378,43 @@ RECIPE
   </div>
 
 <section class="flavor-section">
-  <h2>⭐ 통버섯 구이, 어떤 맛이 끌리세요? 🧂</h2>
-  <p class="sub-title">아래 3가지 맛 중 하나를 선택해 주세요!</p>
+  <h2 class="flavor-title">⭐ 통버섯 구이, 어떤 맛이 끌리세요? 🧂</h2>
+  <p class="flavor-sub">아래 3가지 맛 중 하나를 선택해 주세요!</p>
 
-  <div class="flavor-card meat">
-    <div class="num">1</div>
-    <div class="icon">🥩</div>
-    <div class="text">
+  <div class="flavor-card">
+    <div class="flavor-num">1</div>
+    <div class="flavor-icon">🥩</div>
+    <div class="flavor-text">
       <h3>고기 같은 풍미</h3>
       <p>가장 추천!</p>
       <p>스테이크 같은 깊은 맛</p>
     </div>
-    <button>✓ 이 맛 선택하기</button>
+    <a href="#" class="flavor-btn">✓ 이 맛 선택하기</a>
   </div>
 
-  <div class="flavor-card garlic">
-    <div class="num">2</div>
-    <div class="icon">🧄</div>
-    <div class="text">
+  <div class="flavor-card green">
+    <div class="flavor-num">2</div>
+    <div class="flavor-icon">🧄</div>
+    <div class="flavor-text">
       <h3>깔끔하고 향긋한 맛</h3>
       <p>버터와 마늘의 조화!</p>
       <p>담백하고 향긋한 풍미</p>
     </div>
-    <button>✓ 이 맛 선택하기</button>
+    <a href="#" class="flavor-btn">✓ 이 맛 선택하기</a>
   </div>
 
-  <div class="flavor-card spicy">
-    <div class="num">3</div>
-    <div class="icon">🌶️</div>
-    <div class="text">
+  <div class="flavor-card red">
+    <div class="flavor-num">3</div>
+    <div class="flavor-icon">🌶️</div>
+    <div class="flavor-text">
       <h3>매콤한 감칠맛</h3>
       <p>은은한 매운맛!</p>
       <p>중독성 있는 풍미</p>
     </div>
-    <button>✓ 이 맛 선택하기</button>
+    <a href="#" class="flavor-btn">✓ 이 맛 선택하기</a>
   </div>
 
-  <p class="bottom-text">❤️ 마음에 드는 맛을 골라보세요! ❤️</p>
+  <p class="flavor-bottom">❤️ 마음에 드는 맛을 골라보세요! ❤️</p>
 </section>
     </div>
   </div>
