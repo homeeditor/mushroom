@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
+*{box-sizing:border-box;}
 
 body{
   margin:0;
@@ -21,7 +21,7 @@ body{
   width:100%;
   max-width:520px;
   margin:0 auto;
-  padding:18px 14px 40px;
+  padding:16px 14px 40px;
 }
 
 .notice{
@@ -29,37 +29,37 @@ body{
   text-align:center;
   background:#f7f7f7;
   color:#666;
-  font-size:12px;
-  padding:10px 15px;
+  font-size:11px;
+  padding:10px 14px;
   border-radius:999px;
-  margin:0 auto 22px;
-}
+  margin:0 auto 28px;
 }
 
 .label{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:16px;
-  margin:20px 0 10px;
-  color:#8c5c2c;
-  font-weight:700;
-  letter-spacing:8px;
+  gap:18px;
+  color:#7a4b25;
   font-size:20px;
+  font-weight:800;
+  letter-spacing:8px;
+  margin-bottom:12px;
 }
 
 .label::before,
 .label::after{
   content:"";
-  width:120px;
+  width:90px;
   height:2px;
-  background:#c7a47a;
+  background:#b68b5c;
+  display:block;
 }
 
 h1{
   font-family:'Jua',sans-serif;
   text-align:center;
-  font-size:46px;
+  font-size:50px;
   font-weight:400;
   margin:0;
   color:#4a2607;
@@ -67,14 +67,14 @@ h1{
 
 .subtitle{
   text-align:center;
-  font-size:18px;
+  font-size:19px;
   color:#7b4b24;
-  margin:10px 0 18px;
+  margin:10px 0 22px;
 }
 
 .hero{
   width:100%;
-  height:250px;
+  height:255px;
   object-fit:cover;
   border-radius:18px 18px 0 0;
   display:block;
@@ -82,7 +82,7 @@ h1{
 
 .card{
   background:#fffdf8;
-  border:1px solid #efd8b8;
+  border:1.5px solid #efd8b8;
   border-radius:18px;
   padding:22px 20px;
   box-shadow:0 4px 16px rgba(92,55,18,0.08);
@@ -95,106 +95,149 @@ h1{
 
 .section-title{
   font-family:'Jua',sans-serif;
-  font-size:27px;
+  font-size:30px;
   font-weight:400;
-  margin:0 0 16px;
+  margin:0 0 18px;
 }
 
 .step{
   display:flex;
   gap:12px;
   align-items:flex-start;
-  padding:11px 0;
+  padding:12px 0;
   border-bottom:1px dashed #ead5bd;
   font-size:15px;
-  line-height:1.55;
+  line-height:1.6;
 }
 
-.step:last-child{border-bottom:none}
+.step:last-child{border-bottom:none;}
 
 .num{
-  flex:0 0 26px;
-  width:26px;
-  height:26px;
+  flex:0 0 28px;
+  width:28px;
+  height:28px;
   border-radius:50%;
-  background:#a27b56;
+  background:#a87b52;
   color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
   font-weight:800;
-  font-size:14px;
+  font-size:15px;
+}
+
+.seasoning-box{
+  text-align:center;
 }
 
 .seasoning-title{
   font-family:'Jua',sans-serif;
-  font-size:28px;
+  font-size:31px;
   font-weight:400;
-  margin:0 0 18px;
+  margin:0 0 12px;
+}
+
+.seasoning-sub{
+  font-size:16px;
+  font-weight:800;
+  margin:0 0 24px;
 }
 
 .season-card{
-  border:2px solid #f0d6ad;
-  border-radius:18px;
-  padding:18px 16px;
-  margin-bottom:14px;
+  border:2px solid #e8d2b3;
+  border-radius:20px;
+  padding:20px 16px;
+  margin-bottom:16px;
+  display:grid;
+  grid-template-columns:38px 78px 1fr;
+  gap:12px;
+  align-items:center;
+  background:#fffaf1;
+  text-align:left;
+}
+
+.season-card.green{
+  border-color:#8aad76;
+}
+
+.season-card.red{
+  border-color:#ef6f6a;
+}
+
+.season-num{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#a87b52;
+  color:white;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  background:#fffaf1;
+  justify-content:center;
+  font-size:18px;
+  font-weight:800;
 }
 
-.season-card:last-child{margin-bottom:0}
-
-.season-text{
-  border-left:5px solid #b98f61;
-  padding-left:14px;
-  flex:1;
+.season-img{
+  width:78px;
+  height:78px;
+  object-fit:contain;
 }
 
-.season-card:nth-child(3) .season-text{border-left-color:#7fad64}
-.season-card:nth-child(4) .season-text{border-left-color:#ef5b3d}
+.season-info{
+  min-width:0;
+}
 
 .season-name{
-  font-size:20px;
-  font-weight:900;
-  margin-bottom:7px;
+  font-size:22px;
+  font-weight:800;
+  color:#3b230f;
+  margin-bottom:8px;
 }
 
-.season-text ul{
-  margin:0;
-  padding-left:18px;
-  font-size:14px;
-  line-height:1.5;
+.season-card.green .season-name{
+  color:#3f7e35;
+}
+
+.season-card.red .season-name{
+  color:#d71919;
+}
+
+.season-desc{
+  font-size:15px;
+  line-height:1.6;
+  color:#3b230f;
 }
 
 .season-btn{
-  display:inline-block;
+  grid-column:1 / 4;
+  display:block;
+  width:100%;
   background:#ffd15a;
-  border:2px solid #e8a727;
+  border:2px solid #e5a51c;
   color:#3b230f;
   text-decoration:none;
-  padding:12px 15px;
-  border-radius:12px;
-  font-weight:900;
-  font-size:14px;
+  padding:13px 16px;
+  border-radius:14px;
+  font-size:17px;
+  font-weight:800;
+  text-align:center;
   white-space:nowrap;
+  margin-top:6px;
 }
+
+.seasoning-bottom{
+  font-weight:800;
+  font-size:17px;
+  margin-top:16px;
+}
+
 .share-box{
-  max-width:520px;
-  margin:18px auto;
-  background:#fffdf8;
-  border:1px solid #efd8b8;
-  border-radius:18px;
-  padding:22px 20px;
-  box-shadow:0 4px 16px rgba(92,55,18,0.08);
-}
+  text-align:center;
 }
 
 .share-title{
   font-family:'Jua',sans-serif;
-  font-size:24px;
+  font-size:25px;
   margin-bottom:6px;
 }
 
@@ -206,17 +249,18 @@ h1{
 
 .share-buttons{
   display:flex;
-  gap:12px;
+  gap:10px;
 }
 
 .share-buttons button{
   flex:1;
   border:none;
   border-radius:12px;
-  padding:13px 10px;
+  padding:13px 8px;
   font-weight:800;
   font-size:15px;
   cursor:pointer;
+  white-space:nowrap;
 }
 
 .kakao{
@@ -230,124 +274,25 @@ h1{
   color:#3b230f;
 }
 
-@media(max-width:420px){
-  h1{font-size:40px}
-  .hero{height:220px}
+@media(min-width:700px){
+  .wrap{
+    max-width:720px;
+  }
+
   .season-card{
-    flex-direction:column;
-    align-items:stretch;
+    grid-template-columns:48px 110px 1fr 150px;
+    padding:22px;
   }
+
+  .season-img{
+    width:105px;
+    height:105px;
+  }
+
   .season-btn{
-    text-align:center;
-  }
-}
-  .flavor-section{
-  background:#fffdf8;
-  border:1px solid #efd8b8;
-  border-radius:22px;
-  padding:26px 20px;
-  margin-bottom:18px;
-  box-shadow:0 4px 16px rgba(92,55,18,0.08);
-}
-
-.flavor-title{
-  font-family:'Jua',sans-serif;
-  font-size:30px;
-  text-align:center;
-  margin:0 0 14px;
-}
-
-.flavor-sub{
-  text-align:center;
-  font-size:17px;
-  font-weight:800;
-  margin:0 0 22px;
-}
-
-.flavor-card{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  border:2px solid #ead3b4;
-  border-radius:16px;
-  padding:14px;
-  margin-bottom:12px;
-  background:#fffaf1;
-}
-
-.flavor-num{
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  background:#a27b56;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-  flex-shrink:0;
-}
-
-.flavor-card{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.flavor-icon{
-    width:140px;
-    min-width:140px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.flavor-icon img{
-    width:120px;
-    height:auto;
-    display:block;
-}
-.flavor-text{
-    flex:1;
-    min-width:250px;
-}
-
-.flavor-text h3{
-    white-space:nowrap;
-}
-
-.flavor-btn{
-  background:#ffd15a;
-  border:2px solid #e8a727;
-  border-radius:12px;
-  padding:10px 12px;
-  font-size:13px;
-  font-weight:900;
-  color:#3b230f;
-  text-decoration:none;
-  white-space:nowrap;
-}
-
-.flavor-card.green{border-color:#91b875;}
-.flavor-card.red{border-color:#ef7770;}
-.flavor-card.green h3{color:#3f7b2b;}
-.flavor-card.red h3{color:#d60000;}
-
-.flavor-bottom{
-  text-align:center;
-  font-size:15px;
-  font-weight:800;
-  margin:16px 0 0;
-}
-
-@media(max-width:420px){
-  .flavor-card{
-    align-items:flex-start;
-  }
-
-  .flavor-btn{
-    font-size:12px;
-    padding:9px 10px;
+    grid-column:auto;
+    width:auto;
+    margin-top:0;
   }
 }
 </style>
@@ -358,25 +303,13 @@ h1{
 
   <div class="notice">ⓘ 쿠팡 파트너스 활동의 일환으로, 수수료를 제공받습니다.</div>
 
-  <div style="
-display:flex;
-justify-content:center;
-align-items:center;
-gap:20px;
-font-size:24px;
-font-weight:700;
-color:#8c5c2c;
-margin:20px 0;
-">
-<span style="width:120px;height:2px;background:#c7a47a;display:block;"></span>
-RECIPE
-<span style="width:120px;height:2px;background:#c7a47a;display:block;"></span>
-</div>
+  <div class="label">RECIPE</div>
+
   <h1>통버섯 구이</h1>
 
   <p class="subtitle">고기보다 맛있다는 초간단 버섯구이 🍄</p>
 
-  <img class="hero" src="ChatGPT Image 2026년 6월 16일 오전 06_22_23.png" alt="ChatGPT Image 2026년 6월 16일 오전 06_22_23.png">
+  <img class="hero" src="mushroom.png" alt="통버섯 구이">
 
   <div class="card recipe-card">
     <h2 class="section-title">👩‍🍳 만드는 방법</h2>
@@ -389,52 +322,50 @@ RECIPE
     <div class="step"><div class="num">6</div><div>겉은 노릇하고 속은 촉촉해지면 완성!</div></div>
   </div>
 
-<section class="flavor-section">
-  <h2 class="flavor-title">⭐ 통버섯 구이 핵심재료 🧂</h2>
-  <p class="flavor-sub">아래 3가지 맛 중 하나를 선택해 주세요!</p>
+  <div class="card seasoning-box">
+    <h2 class="seasoning-title">⭐ 통버섯 구이 핵심재료 🧂</h2>
+    <p class="seasoning-sub">아래 3가지 맛 중 하나를 선택해 주세요!</p>
 
-  <div class="flavor-card">
-    <div class="flavor-num">1</div>
-   <div class="flavor-icon">
-  <img src="ChatGPT Image 2026년 6월 16일 오후 08_23_48.png" alt="스테이크">
-</div>
-    <div class="flavor-text">
-      <h3>고기 같은 풍미</h3>
-      <p>가장 추천!</p>
-      <p>스테이크 같은 깊은 맛</p>
+    <div class="season-card">
+      <div class="season-num">1</div>
+      <img class="season-img" src="steak.png" alt="고기 같은 풍미">
+      <div class="season-info">
+        <div class="season-name">고기 같은 풍미</div>
+        <div class="season-desc">
+          가장 추천!<br>
+          스테이크 같은 깊은 맛
+        </div>
+      </div>
+      <a class="season-btn" href="링크1" target="_blank">✓ 이 맛 선택하기</a>
     </div>
-    <a href="#" class="flavor-btn">👉🏻 보러가기</a>
-  </div>
 
-  <div class="flavor-card green">
-    <div class="flavor-num">2</div>
- <div class="flavor-icon">
-  <img src="ChatGPT Image 2026년 6월 16일 오후 08_27_22.png" alt="마늘">
-</div>
-    <div class="flavor-text">
-      <h3>깔끔하고 향긋한 맛</h3>
-      <p>버터와 마늘의 조화!</p>
-      <p>담백하고 향긋한 풍미</p>
+    <div class="season-card green">
+      <div class="season-num">2</div>
+      <img class="season-img" src="garlic.png" alt="깔끔하고 향긋한 맛">
+      <div class="season-info">
+        <div class="season-name">깔끔하고 향긋한 맛</div>
+        <div class="season-desc">
+          버터와 마늘의 조화!<br>
+          담백하고 향긋한 풍미
+        </div>
+      </div>
+      <a class="season-btn" href="링크2" target="_blank">✓ 이 맛 선택하기</a>
     </div>
-    <a href="#" class="flavor-btn">👉🏻 보러가기</a>
-  </div>
 
-  <div class="flavor-card red">
-    <div class="flavor-num">3</div>
-   <div class="flavor-icon">
-  <img src="ChatGPT Image 2026년 6월 16일 오후 08_27_53.png" alt="고추">
-</div>
-    <div class="flavor-text">
-      <h3>매콤한 감칠맛</h3>
-      <p>은은한 매운맛!</p>
-      <p>중독성 있는 풍미</p>
+    <div class="season-card red">
+      <div class="season-num">3</div>
+      <img class="season-img" src="chili.png" alt="매콤한 감칠맛">
+      <div class="season-info">
+        <div class="season-name">매콤한 감칠맛</div>
+        <div class="season-desc">
+          은은한 매운맛!<br>
+          중독성 있는 풍미
+        </div>
+      </div>
+      <a class="season-btn" href="링크3" target="_blank">✓ 이 맛 선택하기</a>
     </div>
-    <a href="#" class="flavor-btn">👉🏻 보러가기</a>
-  </div>
 
-  <p class="flavor-bottom">❤️ 마음에 드는 맛을 골라보세요! ❤️</p>
-</section>
-    </div>
+    <div class="seasoning-bottom">❤️ 마음에 드는 맛을 골라보세요! ❤️</div>
   </div>
 
   <div class="card share-box">
@@ -458,7 +389,7 @@ function copyLink(){
 function sharePage(){
   if(navigator.share){
     navigator.share({
-      title:"새송이버섯 통구이",
+      title:"통버섯 구이",
       text:"고기보다 맛있다는 초간단 버섯구이 🍄",
       url:window.location.href
     });
